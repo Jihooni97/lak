@@ -1,20 +1,11 @@
-import axios from 'axios';
-import {useEffect} from 'react';
+import React from 'react';
 
-function Home() {
-    const [hello, setHello] = useState('');
-
-    useEffect(() => {
-        axios.get('/home/index')
-            .then(response => setHello(response.data))
-            .catch(error => console.error(error))
-    }, []);
-
+export default Home => {
     return (
         <div>
-            테스트 : {hello}
+            <div>
+                테스트
+            </div>
         </div>
     );
 }
-
-export default Home;

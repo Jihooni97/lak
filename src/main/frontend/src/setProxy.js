@@ -1,14 +1,16 @@
-// src/main/frontend/src/setProxy.js
-
-const {createProxyMiddleware} = require('http-proxy-middleware');
-
-module.exports = function (app) {
-    app.use(
-        '/lak',
-        createProxyMiddleware({
-            // 서버 URL or localhost:설정한포트번호
-            target: 'http://http://localhost:3000',
-            changeOrigin: true,
-        })
-    );
-};
+// import createProxyMiddleware from 'http-proxy-middleware';
+// module.exports = (app) => {
+//     app.use(
+//         '/lak',
+//         createProxyMiddleware({
+//             target: 'http://localhost:8000',
+//             changeOrigin: true
+//         }));
+//
+//     app.use(
+//         '/loarkApi',
+//         createProxyMiddleware({
+//             target: 'https://developer-lostark.game.onstove.com',
+//             changeOrigin: true
+//         }));
+// };
